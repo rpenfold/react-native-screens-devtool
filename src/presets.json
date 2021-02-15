@@ -1,0 +1,40 @@
+[
+  {
+    "name": "iPhone SE (2nd gen)",
+    "width": 375,
+    "height": 667,
+    "scale": 2,
+    "font": 1
+  },
+  {
+    "name": "iPhone 12 mini",
+    "width": 375,
+    "height": 812,
+    "scale": 3,
+    "font": 1,
+    "radius": 50
+  },
+  {
+    "name": "iPhone 11",
+    "width": 414,
+    "height": 896,
+    "scale": 2,
+    "font": 1,
+    "radius": 50
+  },
+  {
+    "name": "iPad (8th gen)",
+    "width": 810,
+    "height": 1080,
+    "scale": 2,
+    "font": 1
+  },
+  {
+    "name": "iPad Air (4th gen)",
+    "width": 820,
+    "height": 1180,
+    "scale": 2,
+    "font": 1,
+    "radius": 25
+  }
+]

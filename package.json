@@ -1,0 +1,45 @@
+{
+  "name": "react-native-screens-devtool",
+  "version": "0.0.1",
+  "description": "A dev tool for quickly simulating different screen sizes.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc --watch",
+    "lint": "eslint .",
+    "prepublish": "npm run build",
+    "test": "jest",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "react-native",
+    "devtool",
+    "screens",
+    "dimensions"
+  ],
+  "author": "Ryan Penfold",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@types/enzyme": "3.10.8",
+    "@types/jest": "25.2.1",
+    "@types/react": "^16.11.0",
+    "@types/react-native": "^0.62.0",
+    "@typescript-eslint/eslint-plugin": "2.29.0",
+    "@typescript-eslint/parser": "2.29.0",
+    "eslint": "6.8.0",
+    "eslint-plugin-react": "7.19.0",
+    "jest": "25.4.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "^0.63.0",
+    "ts-jest": "25.4.0",
+    "typescript": "3.8.3"
+  },
+  "dependencies": {
+    "tiny-emitter": "2.1.0"
+  }
+}
