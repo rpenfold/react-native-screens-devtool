@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "A dev tool for quickly simulating different screen sizes.",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rpenfold/react-native-screens-devtool"
+  },
   "scripts": {
     "build": "tsc",
     "start": "tsc --watch",
