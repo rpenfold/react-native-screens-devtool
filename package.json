@@ -1,6 +1,6 @@
 {
   "name": "react-native-screens-devtool",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A dev tool for quickly simulating different screen sizes.",
   "main": "dist/index.js",
   "repository": {
