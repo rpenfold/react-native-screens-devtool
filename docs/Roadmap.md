@@ -3,6 +3,7 @@
 
 - [ ] Handles for cutom width/height
 - [ ] Animate height/width change
-- [ ] Style toolbar
+- [x] Style toolbar
 - [ ] Add DevSettings menu item
 - [ ] Imperative API for doing things like setting dimensions
+- [ ] Add draggable ruler for measuring
