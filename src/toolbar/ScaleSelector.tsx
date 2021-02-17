@@ -1,5 +1,6 @@
 import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import { Text, TouchableOpacity, View} from 'react-native';
+import styles from '../styles';
 
 interface Props {
   scale: number;
@@ -12,8 +13,9 @@ function ScaleSelector(props: Props) {
   const {scale, setScale} = props;
 
   return (
-    <View>
+    <View style={styles.scaleSelectorContainer}>
       <TouchableOpacity
+        style={styles.btn}
         onPress={() => {
           const index = SCALES.indexOf(scale);
 
@@ -22,10 +24,13 @@ function ScaleSelector(props: Props) {
             setScale(newVal);
           }
         }}>
-        <Text>-</Text>
+        <Text style={styles.btnText}>−</Text>
       </TouchableOpacity>
-      <Text>{scale * 100}%</Text>
+      <TouchableOpacity style={styles.btn} onPress={() => setScale(1)}>
+        <Text>{scale * 100}%</Text>
+      </TouchableOpacity>
       <TouchableOpacity
+        style={styles.btn}
         onPress={() => {
           const index = SCALES.indexOf(scale);
 
@@ -34,7 +39,7 @@ function ScaleSelector(props: Props) {
             setScale(newVal);
           }
         }}>
-        <Text>+</Text>
+        <Text style={styles.btnText}>+</Text>
       </TouchableOpacity>
     </View>
   );

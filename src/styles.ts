@@ -15,10 +15,14 @@ const styles = StyleSheet.create({
   toolbarContainer: {
     position: 'absolute',
     top: 0,
+    alignSelf: 'center',
   },
   toolbar: {
-    backgroundColor: 'white',
+    flexGrow: 0,
+    justifyContent: 'center',
     flexDirection: 'row',
+    borderWidth: 1,
+    borderColor: '#CCC',
   },
   screenContainer: {
     alignItems: 'center',
@@ -50,6 +54,7 @@ const styles = StyleSheet.create({
     paddingVertical: 2,
     width: 50,
     alignItems: 'center',
+    zIndex: 1,
   },
   dimWidthLine: {
     height: StyleSheet.hairlineWidth,
@@ -61,9 +66,43 @@ const styles = StyleSheet.create({
     backgroundColor: DIM_LINE_COLOR,
     flexGrow: 1,
   },
+  scaleSelectorContainer: {
+    flexDirection: 'row',
+  },
+  btn: {
+    alignItems: 'center',
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderWidth: 1,
+    borderColor: '#CCC'
+  },
+  btnText: {
+    fontSize: 24,
+  },
+  dropdown: {
+    backgroundColor: 'white',
+    position: 'absolute',
+    top: '100%',
+    left: 0,
+    right: 0,
+    borderWidth: 1,
+    borderColor: '#CCC'
+  },
+  dropdownItem: {
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+  },
+  dropdownItemSelected: {
+    backgroundColor: '#EAEAEA',
+  },
   rotate270: {
     transform: [{rotate: '270deg'}],
   },
+  rotate45: {
+    transform: [{ rotate: '45deg' }]
+  }
 });
 
 export default styles;

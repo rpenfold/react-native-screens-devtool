@@ -5,11 +5,18 @@ import {
   TouchableHighlight,
   Text,
   Animated,
+  StyleSheet,
 } from 'react-native';
 import {MockDeviceConfig} from '../types';
 import styles from '../styles';
 import PresetSelector from './PresetSelector';
 import ScaleSelector from './ScaleSelector';
+
+const localStyles = StyleSheet.create({
+  centerIconOffset: {
+    transform: [{translateY: 3}, {rotate: '45deg'}]
+  }
+})
 
 interface Props {
   devicePan: Animated.ValueXY;
@@ -41,11 +48,11 @@ function Toolbar(props: Props) {
           setSelected={setSelectedPreset}
         />
         <ScaleSelector scale={scale} setScale={setScale} />
-        <TouchableHighlight onPress={props.close}>
-          <Text>X</Text>
+        <TouchableHighlight style={styles.btn} onPress={() => devicePan.setValue({x: 0, y: 0})}>
+          <Text style={[styles.btnText, localStyles.centerIconOffset]}>⦻</Text>
         </TouchableHighlight>
-        <TouchableHighlight onPress={() => devicePan.setValue({x: 0, y: 0})}>
-          <Text>Center</Text>
+        <TouchableHighlight style={styles.btn} onPress={props.close}>
+          <Text>CLOSE</Text>
         </TouchableHighlight>
       </View>
     </View>

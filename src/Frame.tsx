@@ -61,22 +61,16 @@ function Frame(props: FrameProps) {
             pan={devicePan}
           />
         </View>
-        <View style={styles.toolbarContainer}>
-          <SafeAreaView />
-          <View style={styles.toolbar}>
-            <Toolbar
-              presets={presets as Array<MockDeviceConfig>}
-              selectedConfig={selectedConfig}
-              setSelectedPreset={handleSelectPreset}
-              scale={scale}
-              setScale={setScale}
-              devicePan={devicePan}
-              close={props.close}
-            />
-          </View>
-        </View>
       </View>
-      <SafeAreaView />
+      <Toolbar
+        presets={presets as Array<MockDeviceConfig>}
+        selectedConfig={selectedConfig}
+        setSelectedPreset={handleSelectPreset}
+        scale={scale}
+        setScale={setScale}
+        devicePan={devicePan}
+        close={props.close}
+      />
     </View>
   );
 }
