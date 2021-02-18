@@ -14,6 +14,8 @@ interface Props {
 function MockDeviceScreen(props: Props) {
   const {config, children, pan, scale} = props;
   const {width, height, radius} = config;
+  const dimHeightLineStyle = [styles.dimHeightLine, scale < 1 ? { width: 2 } : null]
+  const dimWidthLineStyle = [styles.dimWidthLine, scale < 1 ? { height: 2 } : null]
 
   return (
     <Animated.View
@@ -24,21 +26,21 @@ function MockDeviceScreen(props: Props) {
         },
       ]}>
       <View style={styles.dimHeight}>
-        <View style={styles.dimHeightLine} />
+        <View style={dimHeightLineStyle} />
         <View style={[styles.dimSpec, styles.rotate270]}>
           <Text>{height}</Text>
         </View>
-        <View style={styles.dimHeightLine} />
+        <View style={dimHeightLineStyle} />
       </View>
       <View style={[styles.screen, {width, height, borderRadius: radius ?? 0}]}>
         {children}
       </View>
       <View style={[styles.dimWidth, {width}]}>
-        <View style={styles.dimWidthLine} />
+        <View style={dimWidthLineStyle} />
         <View style={styles.dimSpec}>
           <Text>{width}</Text>
         </View>
-        <View style={styles.dimWidthLine} />
+        <View style={dimWidthLineStyle} />
       </View>
     </Animated.View>
   );

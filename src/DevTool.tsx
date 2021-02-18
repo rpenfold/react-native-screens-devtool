@@ -12,7 +12,7 @@ interface DevToolProps {
   disabled?: boolean;
 }
 
-function DevTool(props: DevToolProps): ReactNode {
+function DevTool(props: DevToolProps) {
   const [enabled, setEnabled] = React.useState(!props.disabled);
   React.useEffect(() => {
     emitter.on('enable', () => {
