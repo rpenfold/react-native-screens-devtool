@@ -8,6 +8,7 @@ import { MockDeviceConfig } from './types';
 const emitter = new (Emitter as any)();
 
 interface DevToolProps {
+  additionalPresets: Array<MockDeviceConfig>;
   children: ReactNode;
   disabled?: boolean;
 }
@@ -30,7 +31,10 @@ function DevTool(props: DevToolProps) {
   }
 
   return (
-    <Frame close={() => emitter.emit('disable')}>
+    <Frame
+      additionalPresets={props.additionalPresets}
+      close={() => emitter.emit('disable')}
+    >
       {Children.only(props.children)}
     </Frame>
   );

@@ -4,16 +4,19 @@ import {Animated, PanResponder, SafeAreaView, View} from 'react-native';
 import styles from './styles';
 import MockDeviceScreen from './MockDeviceScreen';
 import Toolbar from './toolbar';
-import presets from './presets.json';
+import internalPresets from './presets.json';
 import {MockDeviceConfig} from './types';
 import DimensionsProxy from './DimensionsProxy';
 
 interface FrameProps {
+  additionalPresets: Array<MockDeviceConfig>;
   children: ReactNode;
   close(): void;
 }
 
 function Frame(props: FrameProps) {
+  console.debug(props)
+  const presets = React.useRef([...(props.additionalPresets ?? []), ...internalPresets]).current;
   const [selectedPreset, setSelectedPreset] = React.useState(presets[0].name);
   const [scale, setScale] = React.useState(1);
   const selectedConfig = presets.find(
